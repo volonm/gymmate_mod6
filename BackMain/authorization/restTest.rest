@@ -1,0 +1,57 @@
+
+###
+POST http://127.0.0.1:8000/auth/reg
+Content-Type: multipart/form-data
+
+{
+"username":"Ton233y",
+"password": "hawk",
+"email":"hello@gmail.com",
+"dateOfBirth": "2003-10-23",
+"weight":24412.0,
+"height":222.24,
+"goal": "Women Suck",
+  "image": null
+}
+
+###
+
+###
+POST http://127.0.0.1:8000/auth/login
+Content-Type: application/json
+
+{
+  "username": "s",
+  "email": "solo@gmail.com",
+  "password": "123"
+}
+
+###
+
+###
+GET http://127.0.0.1:8000/auth/test
+Content-Type: application/json
+Authorization: Token ed111ecdf08a8642811b2c747217007b23c1ea98
+
+###
+
+
+###
+POST http://127.0.0.1:8000/auth/login
+Content-Type: application/json
+
+{
+  "username": "pablo",
+  "email": "pablo@gmail.com",
+  "password": "123123"
+}
+
+###
+POST http://127.0.0.1:8000/auth/login
+Content-Type: application/json
+
+{
+  "username": "Ton233y",
+  "email": "hello@gmail.com",
+  "password": "123"
+}

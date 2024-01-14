@@ -1,0 +1,93 @@
+###Add new timeslot
+
+POST 127.0.0.1:8000/backgpt/available
+Content-Type: application/json
+Authorization: Token 0bb4a207f575c7ee103f20e6ad317cb20540dd99
+
+{
+  "timeslots": [
+    {
+      "date": "2024-01-15",
+      "startTime": "08:00:00",
+      "endTime": "10:00:00"
+    },
+    {
+      "date": "2024-01-16",
+      "startTime": "11:00:00",
+      "endTime": "13:00:00"
+    },
+    {
+      "date": "2024-01-17",
+      "startTime": "11:00:00",
+      "endTime": "13:00:00"
+    },
+    {
+      "date": "2024-01-18",
+      "startTime": "11:00:00",
+      "endTime": "13:00:00"
+    }
+  ]
+}
+###
+###Delete timeslot
+DELETE 127.0.0.1:8000/backgpt/available/delete
+
+{
+  "id": 1
+}
+
+
+###Get plan
+GET 127.0.0.1:8000/backgpt/plan
+Authorization: Token 0bb4a207f575c7ee103f20e6ad317cb20540dd99
+
+
+
+###Prompt
+POST 127.0.0.1:8000/backgpt/prompt
+Content-Type: application/json
+
+{"prompt": "Im available at Monday for 2 hours and for 1 hour at Wednesday"}
+
+###Edit time
+POST 127.0.0.1:8000/backgpt/edit
+Content-Type: application/json
+
+{
+  "trainingId": 6,
+  "newStartTime": "2022-05-15 08:00:00",
+  "newEndTime": "2022-05-15 10:00:00"
+}
+
+###Delete training
+DELETE 127.0.0.1:8000/backgpt/training/delete
+Content-Type: application/json
+Authorization: Token ed111ecdf08a8642811b2c747217007b23c1ea98
+
+{
+  "trainingId": 1
+}
+
+###Post message to chat
+POST 127.0.0.1:8000/backgpt/chat
+Content-Type: application/json
+Authorization: Token 0bb4a207f575c7ee103f20e6ad317cb20540dd99
+
+{
+     "prompt": "What is a bench press"
+}
+
+###Get all chat messages
+GET 127.0.0.1:8000/backgpt/chat
+Authorization: Token 0bb4a207f575c7ee103f20e6ad317cb20540dd99
+
+
+###Change done training
+POST 127.0.0.1:8000/backgpt/training/change_status
+Content-Type: application/json
+Authorization: Token 0bb4a207f575c7ee103f20e6ad317cb20540dd99
+
+{
+  "trainingId": 11
+}
+

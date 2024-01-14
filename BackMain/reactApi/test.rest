@@ -1,0 +1,18 @@
+###
+POST http://127.0.0.1:8000/api/setUserInfo
+Content-Type: application/json
+Authorization: Token 192168d9a17384e425e74cddcb7dc2dc69ab4290
+
+{
+  "weight": 75,
+  "height": 180,
+  "goal": "My goal",
+  "dateOfBirth": "2004-01-27"
+}
+
+
+###
+
+GET http://127.0.0.1:8000/api/getUserInfo
+Content-Type: application/json
+Authorization: Token 192168d9a17384e425e74cddcb7dc2dc69ab4290
