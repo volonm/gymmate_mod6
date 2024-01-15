@@ -14,9 +14,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Routes>
             <Route path="/register" element={<RegistrationPage />} />
             <Route path="/" element={<LoginPage />} />
-            <Route path="/chat/" element={<ChatRoom />} />
-            <Route path="/profile/" element={<ProfilePage />} />
-            <Route path="/schedule/" element={<TimetableContainer />} />
+            <Route path="/chat" element={<ChatRoom />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/schedule" element={<TimetableContainer />} />
         </Routes>
     </Router>
   </React.StrictMode>,
