@@ -9,10 +9,11 @@ interface SharedFormProps {
   linkText: string;
   to: string;
   buttonText: string; // New prop for button text
+  linkButtonText: string;
   children: ReactNode;
 }
 
-const SharedForm: React.FC<SharedFormProps> = ({ title, onSubmit, linkText, to, buttonText, children }) => {
+const SharedForm: React.FC<SharedFormProps> = ({ title, onSubmit ,  linkText, to, buttonText,linkButtonText, children }) => {
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
@@ -23,7 +24,7 @@ const SharedForm: React.FC<SharedFormProps> = ({ title, onSubmit, linkText, to, 
             <button type="submit" className="btn btn-primary">{buttonText}</button>
             <div className="mt-3">
               <p>
-                {linkText} <Link to={to}>{buttonText}</Link>
+                {linkText} <Link to={to}>{linkButtonText}</Link>
               </p>
             </div>
           </form>
