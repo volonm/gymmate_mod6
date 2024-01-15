@@ -27,8 +27,8 @@ DEBUG = True
 AUTH_USER_MODEL = 'authorization.MyUser'
 
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ["https://gymmate.pythonanywhere.com"]
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
