@@ -11,14 +11,22 @@ interface UserProfile {
   height: number;
   goal: string;
 }
+   const initialUserProfile: UserProfile = {
+    name: '',
+    lastname: '',
+    username: '',
+    dateOfBirth: '',
+    weight: 0,
+    height: 0,
+    goal: '',
+  };
 
 const ProfilePage: React.FC = () => {
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [imageUrl, setImageUrl] = useState<string | null>(null);
 
   const [editing, setEditing] = useState(false); // State to control editing mode
-
-  const [updatedProfileData, setUpdatedProfileData] = useState<UserProfile | null>(null);
+  const [updatedProfileData, setUpdatedProfileData] = useState<UserProfile>(initialUserProfile);
 
 
   const fetchProfile = async () => {
