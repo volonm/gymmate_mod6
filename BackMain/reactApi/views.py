@@ -22,7 +22,7 @@ def getUserInfo(request):
         data = {
             'username': request.user.username,
             'name': request.user.first_name,
-            'last_name': request.user.last_name,
+            'lastname': request.user.last_name,
             'dateOfBirth': request.user.dateOfBirth,
             'weight': request.user.weight,
             'height': request.user.height,
