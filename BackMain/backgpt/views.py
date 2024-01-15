@@ -15,7 +15,7 @@ import openai
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 
-openai_api = "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"
+openai_api = "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"
 @api_view(['POST'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
