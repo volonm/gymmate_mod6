@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
+import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import SharedForm from "./SharedForm.tsx";
 import 'bootstrap/dist/css/bootstrap.min.css';

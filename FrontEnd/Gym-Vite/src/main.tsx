@@ -1,6 +1,6 @@
 // main.tsx
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginPage from './LoginPage';
 import RegistrationPage from './RegistrationPage';

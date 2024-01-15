@@ -1,6 +1,7 @@
 // TimetableContainer.tsx
 
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
+import  { useState, useEffect } from 'react';
 import {Container, Card, ListGroup, Button, Modal, Form} from 'react-bootstrap';
 
 interface Exercise {
