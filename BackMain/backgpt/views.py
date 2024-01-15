@@ -15,7 +15,7 @@ import openai
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 
-
+openai_api = "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"
 @api_view(['POST'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
@@ -97,7 +97,7 @@ def generateTrainingPlan(request):
     ]
     """
     # Set OpenAI API key
-    openai.api_key = "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"
+    openai.api_key = openai_api
     current_date = datetime.now().date()
     age = current_date.year - request.user.dateOfBirth.year - (
             (current_date.month, current_date.day) < (request.user.dateOfBirth.month, request.user.dateOfBirth.day))
@@ -233,7 +233,7 @@ def chat_list_create(request):
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        openai.api_key = "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"
+        openai.api_key = openai.api_key
 
         user_message = request.data['prompt']
 
