@@ -11,8 +11,32 @@ Authorization: Token 192168d9a17384e425e74cddcb7dc2dc69ab4290
 }
 
 
-###
+###GetUserInfo
 
 GET http://127.0.0.1:8000/api/getUserInfo
 Content-Type: application/json
 Authorization: Token 192168d9a17384e425e74cddcb7dc2dc69ab4290
+
+###GetUserImage
+GET http://127.0.0.1:8000/api/getUserImage
+Content-Type: application/json
+Authorization: Token 192168d9a17384e425e74cddcb7dc2dc69ab4290
+
+###GetUserAvailability
+GET http://127.0.0.1:8000/api/getUserAvailability
+Content-Type: application/json
+Authorization: Token 192168d9a17384e425e74cddcb7dc2dc69ab4290
+
+###GetUserTrainings
+GET http://127.0.0.1:8000/api/getUserTrainings
+Content-Type: application/json
+Authorization: Token 192168d9a17384e425e74cddcb7dc2dc69ab4290
+
+###setTrainingDone
+POST http://127.0.0.1:8000/api/setTrainingDone
+Content-Type: application/json
+Authorization: Token 192168d9a17384e425e74cddcb7dc2dc69ab4290
+
+{
+  "training_id" : 4
+}

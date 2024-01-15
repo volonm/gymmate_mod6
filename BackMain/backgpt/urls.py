@@ -10,5 +10,4 @@ urlpatterns = [
     path('edit', views.update_training),
     path('training/delete', views.delete_training),
     path('chat', views.chat_list_create),
-    path('training/change_status', views.toggle_training_done),
 ]

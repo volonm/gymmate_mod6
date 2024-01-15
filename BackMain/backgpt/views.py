@@ -98,8 +98,6 @@ def generateTrainingPlan(request):
     """
     # Set OpenAI API key
     openai.api_key = "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"
-    # TODO:request{availability, age, weight, height, goal, numberOfTrainings}
-    id = request.user.id
     current_date = datetime.now().date()
     age = current_date.year - request.user.dateOfBirth.year - (
             (current_date.month, current_date.day) < (request.user.dateOfBirth.month, request.user.dateOfBirth.day))
@@ -262,17 +260,4 @@ def chat_list_create(request):
         return Response({"response": gpt_response}, status=status.HTTP_200_OK)
 
 
-@api_view(['POST'])
-@authentication_classes([TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def toggle_training_done(request):
-    try:
-        training = get_object_or_404(Training, training_id=request.data['trainingId'])
-        if training.userId != request.user:
-            return Response({"error": "You are trying to change not your training"}, status=400)
-        training.done = not training.done
-        training.save()
-    except Training.DoesNotExist:
-        return Response({'error': 'Training not found'}, status=400)
 
-    return Response({'message': 'Training status toggled', 'done': training.done}, status=status.HTTP_200_OK)

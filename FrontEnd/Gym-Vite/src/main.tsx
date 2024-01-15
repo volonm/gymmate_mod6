@@ -1,10 +1,1 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+import * as React from 'react';import * as ReactDOM from 'react-dom';import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';import ChatRoom from "./ChatRoom";  // Removed the .tsx extensionReactDOM.render(  <React.StrictMode>    <Router>      <Routes>        <Route path="/chat" element={<ChatRoom />} />  {/* Wrapped ChatWindow in JSX tags */}      </Routes>    </Router>  </React.StrictMode>,  document.getElementById('root'));

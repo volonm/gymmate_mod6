@@ -1,8 +1,8 @@
 ###Add new timeslot
 
-POST 127.0.0.1:8000/backgpt/available
+POST gymmate.pythonanywhere.com/backgpt/available
 Content-Type: application/json
-Authorization: Token 0bb4a207f575c7ee103f20e6ad317cb20540dd99
+Authorization: Token 60b43963537c618c16173da34f7ed7e1b2614f69
 
 {
   "timeslots": [
@@ -38,8 +38,9 @@ DELETE 127.0.0.1:8000/backgpt/available/delete
 
 
 ###Get plan
-GET 127.0.0.1:8000/backgpt/plan
-Authorization: Token 0bb4a207f575c7ee103f20e6ad317cb20540dd99
+GET gymmate.pythonanywhere.com/backgpt/plan
+Authorization: Token 60b43963537c618c16173da34f7ed7e1b2614f69
+
 
 
 

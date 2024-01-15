@@ -1,6 +1,6 @@
 
 ###
-POST http://127.0.0.1:8000/auth/reg
+POST gymmate.pythonanywhere.com/auth/reg
 Content-Type: multipart/form-data
 
 {
@@ -11,18 +11,17 @@ Content-Type: multipart/form-data
 "weight":24412.0,
 "height":222.24,
 "goal": "Women Suck",
-  "image": null
 }
 
 ###
 
 ###
-POST http://127.0.0.1:8000/auth/login
+POST gymmate.pythonanywhere.com/auth/login
 Content-Type: application/json
 
 {
-  "username": "s",
-  "email": "solo@gmail.com",
+  "username": "v",
+  "email": "volod.nl.lys@gmail.com",
   "password": "123"
 }
 
@@ -47,11 +46,10 @@ Content-Type: application/json
 }
 
 ###
-POST http://127.0.0.1:8000/auth/login
+POST https://gymmate.pythonanywhere.com/auth/login
 Content-Type: application/json
 
 {
-  "username": "Ton233y",
-  "email": "hello@gmail.com",
+  "username": "v",
   "password": "123"
 }
