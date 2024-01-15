@@ -20,6 +20,9 @@ from backgpt.models import Exercise
 def getUserInfo(request):
     try:
         data = {
+            'username': request.user.username,
+            'name': request.user.first_name,
+            'last_name': request.user.last_name,
             'dateOfBirth': request.user.dateOfBirth,
             'weight': request.user.weight,
             'height': request.user.height,
@@ -39,6 +42,9 @@ def getUserInfo(request):
 def setUserInfo(request):
     try:
         my_user = request.user
+        my_user.first_name = request.data['name']
+        my_user.last_name = request.data['lastname']
+        my_user.username = request.data['username']
         my_user.goal = request.data['goal']
         my_user.dateOfBirth = request.data['dateOfBirth']
         my_user.weight = request.data['weight']
