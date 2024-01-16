@@ -4,7 +4,6 @@ import './ChatRoom.css';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import * as React from "react";
 
 function ChatRoom() {
   const [messages, setMessages] = useState<{ sender: boolean; message: string; timestamp: string }[]>([]);
@@ -110,7 +109,7 @@ function ChatRoom() {
 
     const handleLeaveChat = () => {
     // Redirect to the home page or any other route as needed
-    window.location.href = '/';
+    window.location.href = '/schedule';
   };
 
   return (

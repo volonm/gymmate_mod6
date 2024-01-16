@@ -1,8 +1,9 @@
 // TimetableContainer.tsx
 
 import * as React from 'react';
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {Container, Card, ListGroup, Button, Modal, Form} from 'react-bootstrap';
+import BottomNavBar from './BottomNavBar'; // Import the BottomNavBar component
 
 interface Exercise {
   exercise: string;
@@ -180,7 +181,7 @@ const padZero = (number: number) => {
   if (trainings.length === 0) {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center min-vh-100">
-      <Container>
+      <Container >
         <div className="text-center mb-4">
           <h2>Your Timetable</h2>
         </div>
@@ -195,7 +196,7 @@ const padZero = (number: number) => {
 
   // Render your timetable data here
   return (
-    <Container>
+    <Container style={{ marginBottom: '60px' }}>
       <h2 className="mt-4 mb-4">Your Timetable</h2>
       {trainings.map((training) => (
         <Card key={training.training_id} className="mb-4">
@@ -277,6 +278,8 @@ const padZero = (number: number) => {
           </Button>
         </Modal.Footer>
       </Modal>
+      {/* Include the BottomNavBar component */}
+      <BottomNavBar />
     </Container>
   );
 };
