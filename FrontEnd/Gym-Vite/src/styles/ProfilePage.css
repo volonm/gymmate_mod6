@@ -115,6 +115,12 @@
     padding-bottom: 1.5vh;
     border-style: unset;
   }
+
+  .list-group{
+    margin-bottom: 1dvh;
+
+  }
+
   .root-page strong{
     color:#ffffff;
   }
