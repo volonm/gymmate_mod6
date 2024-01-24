@@ -146,6 +146,8 @@
         .navbar-bottom{
           position: absolute;
         }
-
+    .body{
+      height: 140dvh;
+    }
 
 }
