@@ -6,7 +6,7 @@ import LoginPage from './pages/LoginPage.tsx';
 import RegistrationPage from './pages/RegistrationPage.tsx';
 import ChatRoom from "./pages/ChatRoom.tsx";
 import ProfilePage from "./pages/ProfilePage.tsx";
-import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router ,Route, Routes } from 'react-router-dom';
 import TimeAvailability from './pages/TimeAvailability.tsx';
 import TimetableContainer from './pages/TimetableContainer.tsx';
 import NextWeekAvailability from "./pages/NextWeekAvailability.tsx";
@@ -15,7 +15,6 @@ import TimetableNextWeek from "./pages/TimetableNextWeek.tsx";
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Router>
-      {/* <SchedulePage /> */}
     <Routes>
         <main>
             <Route path="/reg">
