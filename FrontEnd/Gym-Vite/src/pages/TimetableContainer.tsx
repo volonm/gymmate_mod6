@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import BottomNavBar from "../components/BottomNavBar.tsx";
-import "./TimetableContainer.css";
+import "../styles/TimetableContainer.css";
 import {useNavigate} from "react-router-dom";
 
 interface Exercise {
