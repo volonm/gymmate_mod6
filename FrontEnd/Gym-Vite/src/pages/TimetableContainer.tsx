@@ -268,7 +268,7 @@ const TimetableContainer: React.FC = () => {
             <div className="d-flex flex-column align-items-center justify-content-center min-vh-100">
                 <div>
                     <h1 style={{ color: "white", fontWeight: "bold" }}>
-                        Your Timetable
+                        Timetable
                     </h1>
                 </div>
                 <div className="empty-card">
@@ -301,7 +301,7 @@ const TimetableContainer: React.FC = () => {
                             </span>
                         </div>
                     </div>
-                    <h3>{training.goal}</h3>
+                    <h3 className="goal-training">{training.goal}</h3>
 
                     <div className="card-training">
                         <div className="card-training-exercises">
