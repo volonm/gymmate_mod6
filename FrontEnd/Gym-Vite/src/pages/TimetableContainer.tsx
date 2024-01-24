@@ -1,7 +1,7 @@
-import * as  React from "react";
+import * as React from "react";
 import { useState, useEffect } from "react";
 import BottomNavBar from "../components/BottomNavBar.tsx";
-import "../styles/TimetableContainer.css";
+import "./TimetableContainer.css";
 import {useNavigate} from "react-router-dom";
 
 interface Exercise {
@@ -38,6 +38,7 @@ const TimetableContainer: React.FC = () => {
 
             if (!token) {
                 setError("Token not found");
+                navigate("/login");
                 return;
             }
 
@@ -82,6 +83,7 @@ const TimetableContainer: React.FC = () => {
 
         if (!token || !trainingToDelete) {
             setError("Token or training ID not found");
+            navigate("/login");
             return;
         }
 
@@ -268,7 +270,7 @@ const TimetableContainer: React.FC = () => {
             <div className="d-flex flex-column align-items-center justify-content-center min-vh-100">
                 <div>
                     <h1 style={{ color: "white", fontWeight: "bold" }}>
-                        Timetable
+                        Your Timetable
                     </h1>
                 </div>
                 <div className="empty-card">
@@ -301,7 +303,7 @@ const TimetableContainer: React.FC = () => {
                             </span>
                         </div>
                     </div>
-                    <h3 className="goal-training">{training.goal}</h3>
+                    <h3>{training.goal}</h3>
 
                     <div className="card-training">
                         <div className="card-training-exercises">

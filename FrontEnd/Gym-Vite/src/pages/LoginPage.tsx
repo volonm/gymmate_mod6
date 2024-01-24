@@ -1,5 +1,5 @@
 import * as React from 'react';
-import  { useState } from 'react';
+import  { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SharedForm from "../components/SharedForm.tsx";
 import '../styles/Login.css';
@@ -9,6 +9,10 @@ const LoginPage: React.FC = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+  useEffect(() => {
+    // Clear the user token when the component mounts
+    localStorage.removeItem('token');
+  }, []);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
