@@ -1,0 +1,51 @@
+/* styles.css */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  background-image: url("/bg.svg");
+  width: 100dvw;
+  height: 100dvh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 10dvh;
+}
+.header{
+  color: white;
+  background-color: transparent;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.days-container {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 10px; /* Adjust the gap between day components */
+  padding: 10px;
+  white-space: nowrap; /* Prevent day components from wrapping to the next line */
+}
+
+.day-component {
+  background-color: #fffefe;
+  border-radius: 10px;
+  padding: 15px;
+  min-width: 200px; /* Adjust the minimum width of each day component */
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.day-component.active {
+  background-color: #b3d9ff; /* Highlight the active day component */
+}
+
+.btn-primary {
+  margin-top: 10px;
+  align-self: center;
+}
+
+/* Add any additional styles as needed */

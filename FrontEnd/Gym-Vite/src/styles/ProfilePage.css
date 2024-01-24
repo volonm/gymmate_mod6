@@ -1,0 +1,130 @@
+/* ProfilePage.css */
+
+/* Media query for small screens (phones) */
+@media (max-width: 767px) {
+  .container {
+    padding: 10px;
+  }
+  p {
+    font-size: 16px;
+  }
+
+  input[type="text"],
+  input[type="file"],
+  button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .img-circle{
+    width: 60dvw;
+    height: 60dvw;
+    overflow: hidden;
+    margin-top: 3dvh;
+    margin-left: 20dvw;
+  }
+
+
+  .img-profile{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #ddd;
+    border-radius: 60%;
+
+
+  }
+  .img-profile-edit{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #ddd;
+    border-radius: 60%;
+    filter: brightness(30%);
+  }
+
+  .btn-profile-img{
+    z-index: 2;
+    position: absolute;
+    margin-top: 25%;
+    margin-left: 10%;
+    color: white;
+    font-weight: bold;
+    display: none;
+
+  }
+
+  .username-label{
+    margin-top: 2dvh;
+    margin-bottom: 3dvh;
+    text-align: center; /* Center the text horizontally */
+    display: flex;
+    justify-content: center; /* Center the element horizontally */
+    align-items: center;
+    color: #ffffff;
+  }
+
+  .EditButton{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 2vw;
+    cursor: pointer;
+  }
+
+  .cancel-btn{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 2vw;
+  }
+
+  .root-page button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+
+  .profile-data{
+    text-align: right;
+    color: #ffffff;
+    right: 0;
+    margin-right: 5vw;
+    position: absolute;
+  }
+
+  .form-control-goal{
+    width: fit-content;
+    text-align: start;
+    height: 10vw;
+    color: #ffffff;
+    padding-top: 0.5dvh;
+    margin-bottom: 2dvh;
+
+  }
+
+  .list-group-item{
+    background-color: rgba(108, 108, 108, 0.267);
+    backdrop-filter: blur(1px);
+    margin-left: 5dvw;
+    margin-right: 5dvw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    border-style: unset;
+  }
+  .root-page strong{
+    color:#ffffff;
+  }
+
+  .form-control{
+    background-color: rgba(108, 108, 108, 0.267);
+    border-color: #007bff;
+    color:white;
+  }
+
+
+
+}

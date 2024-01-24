@@ -1,0 +1,36 @@
+.line{
+    color: white;
+    width: 95%;
+}
+.form-control{
+    width: 95%;
+}
+p{
+    color: white;
+}
+
+a{
+    color: #0d6efd;;
+}
+
+body{
+    padding-bottom: 0 !important;
+    overflow: hidden !important;
+}
+html{
+    width: 100dvw;
+}
+.mt-5{
+    margin-top: 1rem !important;
+}
+
+.upload-btn {
+    display: block;
+    padding: 10px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    width: 95%;
+}

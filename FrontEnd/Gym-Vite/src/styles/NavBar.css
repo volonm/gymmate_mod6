@@ -1,0 +1,29 @@
+/* NavBar.css */
+
+.navbar-bottom {
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.338);
+    backdrop-filter: blur(7px);
+    width: calc(100% - 6dvw);
+    height: 6.5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3dvw;
+    border-radius: 3dvh;
+}
+
+.navbar-icon {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.navbar-bottom a {
+    color: gray;
+    font-weight: bold;
+}
+
+.navbar-bottom a.active {
+    color: white;
+}

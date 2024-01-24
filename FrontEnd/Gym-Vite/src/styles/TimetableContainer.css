@@ -1,0 +1,238 @@
+/* TimetableContainer.css */
+
+/* Global Styles */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    background-image: url("/bg.svg");
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 10dvh;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+/* Timetable Container */
+.timetable-container {
+    height: 100%;
+}
+
+.timetable-title {
+    padding-top: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2rem;
+    margin-inline: 3dvw;
+}
+
+/* Modals */
+.custom-modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    overflow-y: auto;
+    max-height: 100vh;
+    z-index: 50;
+    position: absolute;
+    backdrop-filter: blur(7px);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.training-modal {
+    background-color: #3f3f4662;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3dvh 2dvh;
+    border-radius: 3dvh;
+    width: 70%;
+}
+
+.edit-title {
+    margin-inline: auto;
+    width: fit-content;
+    margin-bottom: 2dvh;
+}
+
+.edit-time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2dvh;
+    gap: 1dvh;
+}
+.edit-time-container input {
+    padding: 0.8dvh;
+    border-radius: 1dvh;
+    border: none;
+}
+
+.training-card {
+    padding: 5dvw;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    background-color: rgba(108, 108, 108, 0.267);
+    backdrop-filter: blur(7px);
+    color: white;
+    margin-inline: 3dvw;
+    border-radius: 3dvh;
+    margin-bottom: 2dvh;
+}
+
+.training-card.completed {
+    outline: 2px solid #8bff8c; /* Set the outline color and style as desired */
+    color: #b4b4b4;
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-time {
+    font-weight: bold;
+    color: rgb(231, 231, 231);
+    margin-bottom: 0.5rem;
+}
+
+.card-training {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card-training-exercises {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-training-exercise {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-training-exercise-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.card-button {
+    background-color: rgba(128, 128, 128, 0.398);
+    padding: 1dvw 3dvh;
+    color: white;
+    border: 0;
+    border-radius: 2dvw;
+}
+
+.card-button-complete {
+    background-color: rgba(72, 217, 46, 0.4);
+    padding: 1dvw 3dvh;
+    color: white;
+    border: 0;
+    border-radius: 2dvw;
+}
+
+.training-card:not(.completed) .card-button-complete{
+    background-color: rgba(72, 217, 46, 0.4);
+    padding: 1dvw 3dvh;
+    color: white;
+    border: 0;
+    border-radius: 2dvw;
+}
+
+.training-card.completed .card-button-complete{
+    background-color: rgba(133, 133, 133, 0.4);
+    padding: 1dvw 3dvh;
+    color: white;
+    border: 0;
+    border-radius: 2dvw;
+
+}
+
+.button-delete {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.button-submit {
+    background-color: #22c55e;
+}
+
+.empty-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(108, 108, 108, 0.267);
+    backdrop-filter: blur(7px);
+    color: white;
+    margin-inline: 3dvw;
+    border-radius: 3dvh;
+    padding: 5dvw;
+}
+
+.card-button-next {
+    background-color: rgba(128, 128, 128, 0.398);
+    padding: 1dvw 3dvh;
+    color: white;
+    border: 0;
+    border-radius: 2dvw;
+}
+
+.card-button-prev {
+    background-color: rgba(128, 128, 128, 0.398);
+    padding: 1dvw 3dvh;
+    color: white;
+    border: 0;
+    border-radius: 2dvw;
+    margin-top: 2dvh;
+}

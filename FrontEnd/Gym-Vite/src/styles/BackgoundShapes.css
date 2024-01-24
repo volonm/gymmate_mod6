@@ -1,0 +1,85 @@
+/* bg */
+.position-bg {
+  position: absolute;
+  width: 68.3vw;
+  height: 127.4vh;
+  left: -9.5vw;
+  top: -17.9vh;
+}
+
+/* Rectangle 1 */
+.rectangle-1 {
+  position: absolute;
+  width: 8.4vw;
+  height: 49.3vh;
+  left: 23.4vw;
+  top: -10.6vh;
+  background: linear-gradient(180deg, rgba(142, 178, 249, 0.4) 0%, rgba(51, 162, 209, 0.08) 100%);
+  transform: rotate(37.6deg);
+}
+
+/* Rectangle 3 */
+.rectangle-3 {
+  position: absolute;
+  width: 5.6vw;
+  height: 49.3vh;
+  left: 35.8vw;
+  top: 34.6vh;
+  background: linear-gradient(180deg, rgba(142, 178, 249, 0.08) 0%, rgba(51, 162, 209, 0.4) 100%, rgba(51, 124, 209, 0) 100%);
+  transform: rotate(37.6deg);
+}
+
+/* Rectangle 4 */
+.rectangle-4 {
+  position: absolute;
+  width: 5.6vw;
+  height: 49.3vh;
+  left: 40.3vw;
+  top: 41.1vh;
+  background: linear-gradient(180deg, rgba(142, 178, 249, 0.152) 0%, rgba(89, 50, 200, 0.4) 100%);
+  transform: rotate(37.6deg);
+}
+
+/* Rectangle 6 */
+.rectangle-6 {
+  position: absolute;
+  width: 2.8vw;
+  height: 80.7vh;
+  left: 40.8vw;
+  top: -0.5vh;
+  background: linear-gradient(180deg, rgba(142, 178, 249, 0.068) 0%, rgba(51, 162, 209, 0.2) 100%);
+  transform: rotate(37.6deg);
+}
+
+/* Rectangle 5 */
+.rectangle-5 {
+  position: absolute;
+  width: 5.6vw;
+  height: 49.3vh;
+  left: 43.3vw;
+  top: 42.3vh;
+  background: linear-gradient(180deg, rgba(142, 178, 249, 0.356) 0%, rgba(51, 162, 209, 0.4) 100%, rgba(51, 162, 209, 0.148) 100%);
+  transform: rotate(37.6deg);
+}
+
+/* Rectangle 2 */
+.rectangle-2 {
+  position: absolute;
+  width: 8.7vw;
+  height: 61.5vh;
+  left: 27.4vw;
+  top: -17.9vh;
+  background: linear-gradient(180deg, rgba(73, 44, 246, 0.4) 0%, rgba(51, 162, 209, 0.048) 100%);
+  transform: rotate(37.6deg);
+}
+
+/* Rectangle 7 */
+.rectangle-7 {
+  position: absolute;
+  width: 7.2vw;
+  height: 80.7vh;
+  left: 45.1vw;
+  top: 0;
+  background: linear-gradient(180deg, rgba(54, 100, 189, 0.2) 0%, rgba(51, 162, 209, 0.082) 100%);
+  transform: rotate(37.6deg);
+}
