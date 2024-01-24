@@ -7,8 +7,8 @@ body {
     padding: 0;
     background-color: #1e1e1e;
     background-image: url("/bg.svg");
-    width: 100%;
-    height: 100%;
+    width: 100dvw;
+    height: 100dvh;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
