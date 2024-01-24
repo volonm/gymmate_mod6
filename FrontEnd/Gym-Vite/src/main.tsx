@@ -17,15 +17,20 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Router>
       {/* <SchedulePage /> */}
     <Routes>
-        <Route path="/register" element={<RegistrationPage />} />
-        <Route path="/availability" element={<TimeAvailability />} />
-        <Route path="/availability/nextweek" element={<NextWeekAvailability />} />
-        <Route path="/register" element={<RegistrationPage />} />
-        <Route path="/" element={<TimetableContainer />} />
-        <Route path="/chat" element={<ChatRoom/>} />
-        <Route path="/profile" element={<ProfilePage/>} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/next" element={<TimetableNextWeek/>} />
+        <main>
+            <Route path="/reg">
+                <RegistrationPage />
+            </Route>
+            <Route path="/register" element={<RegistrationPage />} />
+            <Route path="/availability" element={<TimeAvailability />} />
+            <Route path="/availability/nextweek" element={<NextWeekAvailability />} />
+            <Route path="/register" element={<RegistrationPage />} />
+            <Route path="/" element={<TimetableContainer />} />
+            <Route path="/chat" element={<ChatRoom/>} />
+            <Route path="/profile" element={<ProfilePage/>} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/next" element={<TimetableNextWeek/>} />
+        </main>
         </Routes>
     </Router>
   </React.StrictMode>,
