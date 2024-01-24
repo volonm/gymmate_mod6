@@ -143,6 +143,9 @@
         .form-control::-ms-input-placeholder { /* Microsoft Edge */
             color: #909090;
         }
+        .navbar-bottom{
+          position: absolute;
+        }
 
 
 }
