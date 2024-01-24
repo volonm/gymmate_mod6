@@ -131,6 +131,18 @@
     color:white;
   }
 
+  .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #909090; /* Change to your desired color */
+            opacity: 1; /* Override browsers' default opacity */
+        }
+
+        .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #909090;
+        }
+
+        .form-control::-ms-input-placeholder { /* Microsoft Edge */
+            color: #909090;
+        }
 
 
 }
