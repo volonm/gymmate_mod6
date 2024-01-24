@@ -270,7 +270,7 @@ const TimetableContainer: React.FC = () => {
             <div className="d-flex flex-column align-items-center justify-content-center min-vh-100">
                 <div>
                     <h1 style={{ color: "white", fontWeight: "bold" }}>
-                        Your Timetable
+                        Timetable
                     </h1>
                 </div>
                 <div className="empty-card">
@@ -289,7 +289,7 @@ const TimetableContainer: React.FC = () => {
 
     return (
         <div className="timetable-container min-vh-100">
-            <h1 className="timetable-title">Your Timetable <button className="card-button-next" onClick={handleNext}> Next week </button></h1>
+            <h1 className="timetable-title">Timetable <button className="card-button-next" onClick={handleNext}> Next week </button></h1>
             {trainings.map((training) => (
                 <div  className={`training-card ${training.done ? 'completed' : ''}`} key={training.training_id}>
                     <div className="card-heading">
