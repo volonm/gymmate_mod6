@@ -1,4 +1,4 @@
-/* styles.css */
+
 body {
     font-family: "Arial", sans-serif;
     margin: 0;
@@ -24,10 +24,10 @@ body {
   
   .days-container {
     display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 10px; /* Adjust the gap between day components */
+    overflow-x: auto;
+    gap: 10px;
     padding: 10px;
-    white-space: nowrap; /* Prevent day components from wrapping to the next line */
+    white-space: nowrap;
   }
   
   .day-component {
@@ -35,14 +35,14 @@ body {
     background-color: #42454d;
     border-radius: 10px;
     padding: 15px;
-    min-width: 300px; /* Adjust the minimum width of each day component */
+    min-width: 300px;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s;
   }
   
   .day-component.active {
-    background-color: #4f575f; /* Highlight the active day component */
+    background-color: #4f575f;
   }
   
   .btn-secondary {
@@ -54,6 +54,5 @@ body {
     align-self: center;
     align-content: center;
   }
-  
-  /* Add any additional styles as needed */
-  
+
+

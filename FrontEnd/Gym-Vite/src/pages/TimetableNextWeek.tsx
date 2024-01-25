@@ -221,8 +221,9 @@ const TimetableContainer: React.FC = () => {
 
     if (trainings.length === 0) {
         const handleAddButtonClick = () => {
-            window.location.href = "/availability";
+            window.location.href = "/availability/nextweek";
         };
+
 
         return (
             <div className="d-flex flex-column align-items-center justify-content-center min-vh-100">

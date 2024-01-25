@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { Modal, Spinner, Toast } from 'react-bootstrap';
-import '../components/BottomNavBar.tsx';
+import BottomNavBar from "../components/BottomNavBar.tsx";
 import '../styles/NextWeekAvailability.css';
 
 interface Timeslot {
@@ -86,7 +86,7 @@ const CustomAlert: React.FC<{ show: boolean; onClose: () => void; message: strin
       </div>
     );
   };
-  
+
 
 const NextWeekAvailability: React.FC = () => {
     const [selectedDay, setSelectedDay] = useState<number>(0);
@@ -99,22 +99,22 @@ const NextWeekAvailability: React.FC = () => {
 
     const handleShowWarning = () => {
       setShowWarning(true);
-  
+
       // Hide the warning after a delay (e.g., 2000 milliseconds)
       setTimeout(() => {
         setShowWarning(false);
       }, 5000);
     };
-  
+
     const handleDayClick = (dayIndex: number) => {
       setSelectedDay(dayIndex);
     };
-  
+
     const handleTimeChange = (field: 'startTime' | 'endTime', value: string) => {
       setTimeslots((prevTimeslots) => {
         const updatedTimeslots = [...prevTimeslots];
         const existingSlot = updatedTimeslots[selectedDay];
-  
+
         if (existingSlot) {
           updatedTimeslots[selectedDay] = {
             ...existingSlot,
@@ -122,14 +122,14 @@ const NextWeekAvailability: React.FC = () => {
           };
         } else {
           const selectedDate = remainingDays[selectedDay].toISOString().split('T')[0];
-  
+
           updatedTimeslots[selectedDay] = {
             date: selectedDate,
             startTime: field === 'startTime' ? value || '00:00:00' : '',
             endTime: field === 'endTime' ? value || '00:00:00' : '',
           };
         }
-  
+
         return updatedTimeslots;
       });
     };
@@ -155,7 +155,7 @@ const NextWeekAvailability: React.FC = () => {
             existingTimeslot.endTime === newTimeslot.endTime
         );
       };
-  
+
     const handleAddTimeslot = () => {
     const newTimeslot = timeslots[selectedDay];
 
@@ -178,7 +178,7 @@ const NextWeekAvailability: React.FC = () => {
       handleShowWarning();
     }
   };
-  
+
   const handleSubmit = async () => {
     // Format the pendingTimeslots array
     const formattedPendingTimeslots = pendingTimeslots.map((slot) => ({
@@ -186,14 +186,14 @@ const NextWeekAvailability: React.FC = () => {
       startTime: slot.startTime,
       endTime: slot.endTime,
     }));
-  
+
     // Create an object with the "timeslots" property
     const requestBody = {
       timeslots: formattedPendingTimeslots,
     };
     console.log(requestBody);
     const token = localStorage.getItem('token');
-  
+
     const response = await fetch('https://gymmate.pythonanywhere.com/backgpt/available', {
       method: 'POST',
       headers: {
@@ -202,44 +202,64 @@ const NextWeekAvailability: React.FC = () => {
       },
       body: JSON.stringify(requestBody),
     });
-  
+
     // Handle response as needed
     if (response.ok) {
       console.log('Availability submitted successfully!');
     } else {
       console.error('Error submitting availability.');
     }
-  
+
     // Perform fetch with pendingTimeslots
     setLoading(true);
-  
-    // Simulate API call
-    setTimeout(() => {
-      setLoading(false);
-      setPendingTimeslots([]); // Clear pending timeslots after submission
-    }, 2000);
-  
+
+
+    fetchPlan();
+
+
     // Example navigation to the next screen
     // window.location.href = '/schedule';
   };
-  
-  
+  const fetchPlan = async () => {
+    const token = localStorage.getItem('token');
+    try {
+        const response = await fetch('https://gymmate.pythonanywhere.com/backgpt/planahead',{
+      method: 'GET',
+      headers: {
+        'Authorization': `Token ${token}`,
+      },
+    });
+
+        if (response.status === 200) {
+            // Redirect to the root path
+            window.location.href = '/next';
+        } else {
+            console.error('Fetch did not return a 200 status');
+        }
+
+
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+};
+
+
     // const shouldShowNextWeekAvailability = () => {
     //   const today = new Date();
     //   return today.getDay() === 0 && today.getHours() >= 20;
     // };
-    //
+
     const remainingDays = Array.from({ length: 7 }, (_, index) => {
       const nextMonday = new Date();
       nextMonday.setDate(nextMonday.getDate() + (1 + (7 - nextMonday.getDay())) % 7);
       nextMonday.setDate(nextMonday.getDate() + index);
       return nextMonday;
     });
-  
+
     return (
       <div className="container mt-4">
         <h3 className="header">Input availability for following week:</h3>
-        
+
         <div className="days-container">
           {remainingDays.map((day, index) => (
             <NextWeekDayComponent
@@ -253,7 +273,7 @@ const NextWeekAvailability: React.FC = () => {
             />
           ))}
         </div>
-  
+
         <div className="mb-4">
           {/* Add your UI elements for inputting availability for the next week here */}
         </div>
@@ -267,7 +287,7 @@ const NextWeekAvailability: React.FC = () => {
               <p>Loading...</p>
             </Modal.Body>
           </Modal>
-  
+
           <Toast
             show={showToast}
             onClose={() => setShowToast(false)}
@@ -292,10 +312,9 @@ const NextWeekAvailability: React.FC = () => {
         onClose={() => setShowWarning(false)}
         message="Empty or overlapping timeslot. Please choose different time."
       />
-        {/* <BottomNavBar /> */}
+         <BottomNavBar />
       </div>
     );
   };
-  
+
   export default NextWeekAvailability;
-  

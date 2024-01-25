@@ -1,4 +1,4 @@
-/* styles.css */
+
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -12,6 +12,7 @@ body {
   background-position: center;
   padding-bottom: 10dvh;
 }
+
 .header{
   color: white;
   background-color: transparent;
@@ -23,29 +24,33 @@ body {
 
 .days-container {
   display: flex;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  gap: 10px; /* Adjust the gap between day components */
+  overflow-x: auto;
+  gap: 10px;
   padding: 10px;
-  white-space: nowrap; /* Prevent day components from wrapping to the next line */
+  white-space: nowrap;
 }
 
 .day-component {
-  background-color: #fffefe;
+  color: white;
+  background-color: #42454d;
   border-radius: 10px;
   padding: 15px;
-  min-width: 200px; /* Adjust the minimum width of each day component */
+  min-width: 300px;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .day-component.active {
-  background-color: #b3d9ff; /* Highlight the active day component */
+  background-color: #4f575f;
 }
 
+.btn-secondary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
 .btn-primary {
   margin-top: 10px;
   align-self: center;
+  align-content: center;
 }
-
-/* Add any additional styles as needed */
