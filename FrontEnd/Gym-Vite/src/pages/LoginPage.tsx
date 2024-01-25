@@ -47,7 +47,7 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <SharedForm title="Mobile Login Page" onSubmit={handleSubmit} linkText="Don't have an account?" to="/register" buttonText="Login" linkButtonText="Register">
+    <SharedForm title="Login Page" onSubmit={handleSubmit} linkText="Don't have an account?" to="/register" buttonText="Login" linkButtonText="Register">
       <div className="mb-3">
         <label className="form-label, line">Username:</label>
         <input
