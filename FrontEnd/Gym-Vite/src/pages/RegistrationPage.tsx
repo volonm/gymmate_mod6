@@ -69,7 +69,7 @@ const RegistrationPage: React.FC = () => {
   };
 
   return (
-    <SharedForm title="Mobile Registration Page" onSubmit={handleSubmit} linkText="Already have an account?" to="/login" buttonText="Register" linkButtonText="Login">
+    <SharedForm title="GymMate Registration" onSubmit={handleSubmit} linkText="Already have an account?" to="/login" buttonText="Register" linkButtonText="Login">
       <div className="mb-3">
         <label className="form-label, line">Email:</label>
         <input
