@@ -1,7 +1,10 @@
 import * as React from 'react';
 import {useState, useEffect} from 'react';
-import BottomNavBar from "../components/BottomNavBar.tsx";
 import "../styles/ProfilePage.css"
+import {Link} from "react-router-dom";
+import {IoChatbubblesOutline} from "react-icons/io5";
+import {FaDumbbell} from "react-icons/fa6";
+import {FaUser} from "react-icons/fa";
 
 interface UserProfile {
     name: string;
@@ -18,6 +21,8 @@ const ProfilePage: React.FC = () => {
     const [imageUrl, setImageUrl] = useState<string | null>(null);
     const [editing, setEditing] = useState(false); // State to control editing mode
     const [updatedProfileData, setUpdatedProfileData] = useState<UserProfile | null>(null);
+    const isActiveLink = (path: string) => location.pathname === path;
+
 
 
     const fetchProfile = async () => {
@@ -326,7 +331,23 @@ const ProfilePage: React.FC = () => {
                 </li>
             </ul>
             {/* Include the BottomNavBar component */}
-            <BottomNavBar/>
+            <nav className="navbar-bottom-custom">
+                <div className='navbar-icon'>
+                    <Link to="/chat" className={`home-tab ${isActiveLink('/chat') ? 'active' : ''}`}>
+                        <IoChatbubblesOutline/>
+                    </Link>
+                </div>
+                <div className='navbar-icon'>
+                    <Link to="/" className={`wallet-tab ${isActiveLink('/schedule') ? 'active' : ''}`}>
+                        <FaDumbbell/>
+                    </Link>
+                </div>
+                <div className='navbar-icon'>
+                    <Link to="/profile" className={`settings-tab ${isActiveLink('/profile') ? 'active' : ''}`}>
+                        <FaUser/>
+                    </Link>
+                </div>
+            </nav>
         </div>
 
     );
